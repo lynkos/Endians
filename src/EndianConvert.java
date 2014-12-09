@@ -12,7 +12,8 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
-/**Takes user input (hexadecimal/byte) and converts it to
+/**
+ * Takes user input (hexadecimal/byte) and converts it to
  * Little-Endian or Big-Endian (depending on what's chosen).
  * 
  * @author lynkos
