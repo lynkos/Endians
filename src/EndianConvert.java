@@ -41,6 +41,9 @@ public class EndianConvert {
 		return Arrays.toString(reverse).replaceAll("[\\s+\\,\\[\\]]", "");
 		}
 	
+	//String pathToImageSortBy = "Endian/resources/Imgs/Input.png";
+	//ImageIcon inputs = new ImageIcon(getClass().getResource(pathToImageSortBy));
+	
 	public static void main(String[] args) throws IOException {
 		/**
 		 * Where the user is going to input what is to be converted
@@ -50,9 +53,9 @@ public class EndianConvert {
 		/**
 		 * The pencil, check, and X icons. Merely for aesthetic purposes
 		 * */
-		ImageIcon input = new ImageIcon("/Users/visitor/Desktop/Projects/Icons/Input.png");
-		ImageIcon check = new ImageIcon("/Users/visitor/Desktop/Projects/Icons/Check.png");
-		ImageIcon nope = new ImageIcon("/Users/visitor/Desktop/Projects/Icons/Nope.png");
+		ImageIcon input = new ImageIcon("Imgs/Input.png");
+		ImageIcon check = new ImageIcon("Imgs/Check.png");
+		ImageIcon nope = new ImageIcon("Imgs/Nope.png");
 		
 		/**
 		 * Initialises the first pop-up box (JPanel). Arranges the input box and text present
