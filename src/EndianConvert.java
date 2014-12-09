@@ -1,7 +1,8 @@
+import java.awt.Font;
 import java.io.IOException;
-
 import java.util.Arrays;
 
+import javax.swing.Box;
 import javax.swing.ImageIcon;
 import javax.swing.JComboBox;
 import javax.swing.JTextField;
@@ -61,6 +62,7 @@ public class EndianConvert {
 		 * Initialises the first pop-up box (JPanel). Arranges the input box and text present
 		 * */
 		JPanel sweg = new JPanel();
+		sweg.add(Box.createVerticalStrut(60));
         sweg.add(new JLabel("0x"));
 		sweg.add(convertBox);
 		sweg.add(new JLabel("Convert to: "));
@@ -118,6 +120,8 @@ public class EndianConvert {
         			 * */
         			String reversed = "0x" + reverseArray(reverse);
                 	JTextField toCopy = new JTextField(reversed);
+                    Font font = new Font("Consolas", Font.PLAIN, 16);                    
+                    toCopy.setFont(font);
                 	swiggity.add(toCopy);
                 	JOptionPane.showConfirmDialog(null, swiggity, "Successfully Converted!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, check);
                 	}
