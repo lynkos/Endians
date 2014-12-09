@@ -1,5 +1,7 @@
-import java.awt.Font;
 import java.io.IOException;
+
+import java.awt.Font;
+
 import java.util.Arrays;
 
 import javax.swing.Box;
@@ -41,10 +43,7 @@ public class EndianConvert {
 			}
 		return Arrays.toString(reverse).replaceAll("[\\s+\\,\\[\\]]", "");
 		}
-	
-	//String pathToImageSortBy = "Endian/resources/Imgs/Input.png";
-	//ImageIcon inputs = new ImageIcon(getClass().getResource(pathToImageSortBy));
-	
+		
 	public static void main(String[] args) throws IOException {
 		/**
 		 * Where the user is going to input what is to be converted
@@ -64,6 +63,9 @@ public class EndianConvert {
 		JPanel sweg = new JPanel();
 		sweg.add(Box.createVerticalStrut(60));
         sweg.add(new JLabel("0x"));
+        Font font = new Font("Monaco", Font.PLAIN, 16);
+        convertBox.setFont(font);
+        convertBox.setFont(convertBox.getFont().deriveFont(16f));
 		sweg.add(convertBox);
 		sweg.add(new JLabel("Convert to: "));
 	    String[] choices = { "Little-Endian", "Big-Endian" };
@@ -83,7 +85,7 @@ public class EndianConvert {
         	JPanel swiggity = new JPanel();
         	
         	/**
-        	 * To make ensure that the user did not input nothing or whitespace character
+        	 * To ensure that the user did not input whitespace character or nothing
         	 * (which could jeopordise the program)
         	 * */
         	if(!swag.equals("") && !swag.equals(" ")) {
@@ -94,7 +96,8 @@ public class EndianConvert {
         		 * */
         		if(dropdown.getSelectedItem().equals("Big-Endian")) {
         			JTextField orig = new JTextField("0x" + toConvert);
-        			swiggity.add(orig);
+                    orig.setFont(font);
+                	swiggity.add(orig);
         			JOptionPane.showConfirmDialog(null, swiggity, "Successfully Converted!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, check);
         			}
         		
@@ -120,7 +123,6 @@ public class EndianConvert {
         			 * */
         			String reversed = "0x" + reverseArray(reverse);
                 	JTextField toCopy = new JTextField(reversed);
-                    Font font = new Font("Consolas", Font.PLAIN, 16);                    
                     toCopy.setFont(font);
                 	swiggity.add(toCopy);
                 	JOptionPane.showConfirmDialog(null, swiggity, "Successfully Converted!", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, check);
