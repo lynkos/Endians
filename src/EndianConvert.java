@@ -43,7 +43,7 @@ public class EndianConvert {
 			}
 		return Arrays.toString(reverse).replaceAll("[\\s+\\,\\[\\]]", "");
 		}
-		
+				
 	public static void main(String[] args) throws IOException {
 		/**
 		 * Where the user is going to input what is to be converted
@@ -56,16 +56,16 @@ public class EndianConvert {
 		ImageIcon input = new ImageIcon("Imgs/Input.png");
 		ImageIcon check = new ImageIcon("Imgs/Check.png");
 		ImageIcon nope = new ImageIcon("Imgs/Nope.png");
-		
+				
 		/**
 		 * Initialises the first pop-up box (JPanel). Arranges the input box and text present
 		 * */
 		JPanel sweg = new JPanel();
 		sweg.add(Box.createVerticalStrut(60));
-        sweg.add(new JLabel("0x"));
         Font font = new Font("Monaco", Font.PLAIN, 16);
         convertBox.setFont(font);
         convertBox.setFont(convertBox.getFont().deriveFont(16f));
+        sweg.add(new JLabel("0x"));
 		sweg.add(convertBox);
 		sweg.add(new JLabel("Convert to: "));
 	    String[] choices = { "Little-Endian", "Big-Endian" };
@@ -136,5 +136,5 @@ public class EndianConvert {
         		JOptionPane.showConfirmDialog(null, "...And so you shall recieve nothing.", "You entered nothing...", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, nope);
         		}
         	}
-        }
+        }	
 }
