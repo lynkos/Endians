@@ -19,7 +19,8 @@ import javax.swing.JPanel;
  * @version 1.0
  * */
 
-public class EndianConvert {
+@SuppressWarnings("serial")
+public class EndianConvert extends JPanel {
 	/**
 	 * @param remove
 	 * @return String without "0x" or "0X" in the beginning
@@ -58,7 +59,8 @@ public class EndianConvert {
 		ImageIcon nope = new ImageIcon("Imgs/Nope.png");
 				
 		/**
-		 * Initialises the first pop-up box (JPanel). Arranges the input box and text present
+		 * Creates and initialises the first pop-up box (JPanel).
+		 * Arranges the input box and text present
 		 * */
 		JPanel sweg = new JPanel();
 		sweg.add(Box.createVerticalStrut(60));
@@ -136,5 +138,5 @@ public class EndianConvert {
         		JOptionPane.showConfirmDialog(null, "...And so you shall recieve nothing.", "You entered nothing...", JOptionPane.OK_CANCEL_OPTION, JOptionPane.PLAIN_MESSAGE, nope);
         		}
         	}
-        }	
-}
+        }
+	}
