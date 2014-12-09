@@ -61,8 +61,11 @@ public class EndianConvert extends JPanel {
 		/**
 		 * Creates and initialises the first pop-up box (JPanel).
 		 * Arranges the input box and text present
+		 * //And background and border too
 		 * */
 		JPanel sweg = new JPanel();
+		//sweg.setBackground(Color.WHITE);
+		//sweg.setBorder(BorderFactory.createLineBorder(Color.BLACK));
 		sweg.add(Box.createVerticalStrut(60));
         Font font = new Font("Monaco", Font.PLAIN, 16);
         convertBox.setFont(font);
