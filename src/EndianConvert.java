@@ -34,7 +34,7 @@ public class EndianConvert extends JPanel {
 	
 	/**
 	 * @param reverse
-	 * @return String who was converted from a String array that had its indexes reversed
+	 * @return String who was converted from a String array with its indexes reversed
 	 * */
 	public static String reverseArray(String[] reverse) {
 		for(int i = 0; i < reverse.length / 2; i++) {
